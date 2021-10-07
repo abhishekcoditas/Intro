@@ -7,4 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'intro';
+  jsonValue = {
+    A : "Hello",
+    B : "Abhi"
+  }
+
+  date = new Date();
+  onClick(){
+    console.log('Button CLicked' , this.title);
+  }
 }
