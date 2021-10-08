@@ -1,5 +1,43 @@
-<h1>{{title | truncate}}</h1>
+<!-- <h1>{{title | truncate}}</h1>
 <h2> {{jsonValue | json}} </h2>
 <h3> {{date | date:"M:d:H"}} </h3>
 <button (click)="onClick()" >Click Me</button>
+<hr>
 <input type="text" [(ngModel)]="title">
+<hr>
+<input type="text" [(ngModel)]="userObject.name">
+<input type="text" [(ngModel)]="userObject.age">
+<input type="text" [(ngModel)]="userObject.id">
+
+<ng-container *ngIf="showUser">
+  <app-user [user]="userObject" (userEvent)="onOutput($event)"></app-user>
+</ng-container>
+
+<ul *ngFor="let item of (posts | async); let i=index ">
+  <li>{{i}}</li>
+  <li>{{item.title}}</li>
+  <li>{{item.body}}</li>
+</ul> -->
+
+
+<button (click)="goToRoute()">Go To Fourth</button>
+<!-- <a routerLink="/first">Go to First</a>
+<hr>
+<a routerLink="/second">Go to Second</a>
+<hr>
+<a routerLink="/third">Go to Third</a>
+<hr>
+<a routerLink="/fourth">Go to Fourth</a> -->
+
+<div class="split left">
+  <div class="centered">
+   
+  </div>
+</div>
+
+<div class="split right">
+  <div class="centered">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
