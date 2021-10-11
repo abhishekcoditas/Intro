@@ -9,7 +9,8 @@ import { UserComponent } from './user/user.component';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 import { ThirdComponent } from './third/third.component';
-import { FourthComponent } from './fourth/fourth.component'
+import { FourthComponent } from './fourth/fourth.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { FourthComponent } from './fourth/fourth.component'
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [
   ],
