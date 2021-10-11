@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl , FormGroup , FormBuilder, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpService } from './http.service';
 
@@ -21,19 +22,26 @@ export class AppComponent implements OnInit{
     isColored : true
   }
 
+  testProp = new FormControl('');
+
+  profileForm = new FormGroup({
+    firstName : new FormControl('' , Validators.min(2)),
+    lastName : new FormControl('')
+  })
+
+
+
   showUser : boolean = true;
 
   constructor(private httpService : HttpService,
-              private router : Router){
+              private router : Router, private fb : FormBuilder){
                 this.router.events.subscribe((e)=>{
                   console.log(e);
                 })
               }
 
-  goToRoute(route:string = '/fourth'):void{
-    this.router.navigateByUrl(route).then(()=>{
-      console.log(this.router.url);
-    }); 
+    modifyFormControl():void{
+    this.testProp.setValue('Hello World')
   }            
 
   date = new Date();

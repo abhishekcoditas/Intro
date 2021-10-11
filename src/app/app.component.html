@@ -20,7 +20,7 @@
 </ul> -->
 
 
-<button (click)="goToRoute()">Go To Fourth</button>
+<button (click)="modifyFormControl()">Modify Form Control</button>
 <!-- <a routerLink="/first">Go to First</a>
 <hr>
 <a routerLink="/second">Go to Second</a>
@@ -29,15 +29,7 @@
 <hr>
 <a routerLink="/fourth">Go to Fourth</a> -->
 
-<div class="split left">
-  <div class="centered">
-   
-  </div>
-</div>
+<input type="text" [formControl]="testProp">
 
-<div class="split right">
-  <div class="centered">
-    <router-outlet></router-outlet>
-  </div>
-</div>
-
+  <router-outlet></router-outlet>
+ 
